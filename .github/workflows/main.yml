@@ -14,6 +14,7 @@ jobs:
         with:
           channel: 'stable'
           architecture: x64
+
       - run: flutter pub get
       
       - run: pod repo update
@@ -36,6 +37,11 @@ jobs:
 
       - name: List files in ios directory (debug)
         run: ls -la ios
+
+      - name: Check IPA file size and details (debug)
+        run: |
+          file ios/FlutterIpaExport.ipa
+          ls -lh ios/FlutterIpaExport.ipa
 
       - name: Upload IPA as Artifact
         uses: actions/upload-artifact@v3
