@@ -1,11 +1,11 @@
-name: iOS-ipa-build
+name: Build iOS Ipa
 
 on:
   workflow_dispatch:
 
 jobs:
   build-ios:
-    name: 🎉 iOS Build
+    name: Build iOS Ipa
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
@@ -14,9 +14,8 @@ jobs:
         with:
           channel: 'stable'
           architecture: x64
-
       - run: flutter pub get
-      
+
       - run: pod repo update
         working-directory: ios
 
@@ -32,19 +31,11 @@ jobs:
         run: zip -qq -r -9 FlutterIpaExport.ipa Payload
         working-directory: build/ios/iphoneos
 
-      - name: Move IPA to iOS Directory
-        run: mv build/ios/iphoneos/FlutterIpaExport.ipa ios/FlutterIpaExport.ipa
-
-      - name: List files in ios directory (debug)
-        run: ls -la ios
-
-      - name: Check IPA file size and details (debug)
-        run: |
-          file ios/FlutterIpaExport.ipa
-          ls -lh ios/FlutterIpaExport.ipa
-
-      - name: Upload IPA as Artifact
-        uses: actions/upload-artifact@v3
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
         with:
-          name: FlutterIpaExport
-          path: ios/FlutterIpaExport.ipa
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: build/ios/iphoneos/FlutterIpaExport.ipa
+          tag: v1.0
+          overwrite: true
+          body: "Congrats"
