@@ -34,6 +34,9 @@ jobs:
       - name: Move IPA to iOS Directory
         run: mv build/ios/iphoneos/FlutterIpaExport.ipa ios/FlutterIpaExport.ipa
 
+      - name: List files in ios directory (debug)
+        run: ls -la ios
+
       - name: Upload IPA as Artifact
         uses: actions/upload-artifact@v3
         with:
