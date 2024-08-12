@@ -16,7 +16,6 @@ jobs:
           architecture: x64
       - run: flutter pub get
       
-
       - run: pod repo update
         working-directory: ios
 
@@ -32,4 +31,5 @@ jobs:
         run: zip -qq -r -9 FlutterIpaExport.ipa Payload
         working-directory: build/ios/iphoneos
 
-      
+      - name: Move IPA to iOS Directory
+        run: mv build/ios/iphoneos/FlutterIpaExport.ipa ios/FlutterIpaExport.ipa
