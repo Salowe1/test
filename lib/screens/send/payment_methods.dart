@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:lockre/constants/colors.dart'; // Ensure this path matches your project structure
-import 'package:lockre/screens/transactions/transaction_service.dart'; // Ensure this path matches your project structure
+import 'package:test/constants/colors.dart'; // Ensure this path matches your project structure
+import 'package:test/screens/transactions/transaction_service.dart'; // Ensure this path matches your project structure
 import 'package:permission_handler/permission_handler.dart';
 
 class PaymentMethodsScreen extends StatefulWidget {
@@ -14,7 +14,7 @@ class PaymentMethodsScreen extends StatefulWidget {
 }
 
 class _PaymentMethodsScreenState extends State<PaymentMethodsScreen> {
-  static const platform = MethodChannel('com.example.lockre/notification');
+  static const platform = MethodChannel('com.example.test/notification');
 
   String _selectedPaymentMethod = '';
 

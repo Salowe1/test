@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lockre/constants/colors.dart';
-import 'package:lockre/screens/settings/contact_support_screen.dart';
-import 'package:lockre/screens/ecarte/my_ecarte.dart';
-import 'package:lockre/screens/ecarte/ecarte_order.dart';
+import 'package:test/constants/colors.dart';
+import 'package:test/screens/settings/contact_support_screen.dart';
+import 'package:test/screens/ecarte/my_ecarte.dart';
+import 'package:test/screens/ecarte/ecarte_order.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:whatsapp_unilink/whatsapp_unilink.dart';

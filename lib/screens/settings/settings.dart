@@ -2,17 +2,17 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:share/share.dart';
-import 'package:lockre/constants/colors.dart';
-import 'package:lockre/screens/settings/contact_support_screen.dart';
-import 'package:lockre/screens/settings/rate_lockre.dart'; // Import the RateLockreDialog
-import 'package:lockre/screens/home/home.dart';
+import 'package:test/constants/colors.dart';
+import 'package:test/screens/settings/contact_support_screen.dart';
+import 'package:test/screens/settings/rate_test.dart'; // Import the Ratetest Dialog
+import 'package:test/screens/home/home.dart';
 import 'logout.dart';
-import 'package:lockre/screens/settings/politiques_confident.dart';
-import 'package:lockre/screens/settings/promo_code_screen.dart';
-import 'package:lockre/screens/auth/reset/reset_password.dart';
-import 'package:lockre/screens/settings/limites_de_transaction.dart';
-import 'package:lockre/screens/settings/conditions_generales.dart';
-import 'package:lockre/screens/settings/connected_devices_screen.dart';
+import 'package:test/screens/settings/politiques_confident.dart';
+import 'package:test/screens/settings/promo_code_screen.dart';
+import 'package:test/screens/settings/password/last_password.dart';
+import 'package:test/screens/settings/limites_de_transaction.dart';
+import 'package:test/screens/settings/conditions_generales.dart';
+import 'package:test/screens/settings/connected_devices_screen.dart';
 
 // Import onboarding screens
 
@@ -88,7 +88,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ),
             if (_isRatingDialogVisible)
               Center(
-                child: RateLockreDialog(onClose: _hideRatingDialog),
+                child: RatetestDialog(onClose: _hideRatingDialog),
               ),
           ],
         ),
@@ -175,7 +175,7 @@ class SettingsContent extends StatelessWidget {
               icon: Icons.lock,
               title: 'Changer mon mot de passe',
               onTap: () {
-                Get.to(() => const ChangePasswordScreen());
+                Get.to(() => const LastPasswordPage());
               },
             ),
           ],

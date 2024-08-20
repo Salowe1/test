@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lockre/constants/colors.dart';
-import 'package:lockre/routes/route.dart';
+import 'package:test/constants/colors.dart';
+import 'package:test/routes/route.dart';
 import 'package:device_apps/device_apps.dart';
 
 class MyEcarteScreen extends StatelessWidget {

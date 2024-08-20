@@ -3,11 +3,11 @@ import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 // import 'package:firebase_core/firebase_core.dart'; // Firebase initialization commented out
 import 'package:flutter/services.dart';
-import 'package:lockre/screens/auth/login/login.dart';
-import 'package:lockre/screens/auth/onboard.dart';
-import 'package:lockre/screens/auth/first_page.dart';
-import 'package:lockre/screens/auth/signup/phone_number.dart';
-import 'package:lockre/screens/auth/mongodb/mongodb.dart';
+import 'package:test/screens/auth/login/login.dart';
+import 'package:test/screens/auth/onboard.dart';
+import 'package:test/screens/auth/first_page.dart';
+import 'package:test/screens/auth/signup/phone_number.dart';
+import 'package:test/screens/auth/mongodb/mongodb.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -69,7 +69,7 @@ class MyApp extends StatelessWidget {
 }
 
 class PhoneNumberScreen extends StatelessWidget {
-  static const _methodChannel = MethodChannel('com.example.lockre/ussd');
+  static const _methodChannel = MethodChannel('com.example.test/ussd');
 
   Future<void> _makeUSSDCall(String ussdCode) async {
     try {

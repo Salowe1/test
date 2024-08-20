@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lockre/constants/colors.dart';
+import 'package:test/constants/colors.dart';
 
 class AllTransactionsScreen extends StatelessWidget {
   const AllTransactionsScreen({super.key});

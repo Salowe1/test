@@ -1,8 +1,8 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lockre/constants/colors.dart';
-import 'package:lockre/screens/home/home.dart';
+import 'package:test/constants/colors.dart';
+import 'package:test/screens/home/home.dart';
 import 'package:lottie/lottie.dart';
 
 class PhotoCnib extends StatefulWidget {

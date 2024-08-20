@@ -1,30 +1,30 @@
 
 import 'package:get/get.dart';
-import 'package:lockre/screens/home/home.dart';
-import 'package:lockre/screens/settings/password/change_password.dart';
-import 'package:lockre/screens/settings/settings.dart';
-import 'package:lockre/screens/settings/promo_code_screen.dart';
-import 'package:lockre/screens/settings/limites_de_transaction.dart';
-import 'package:lockre/screens/settings/conditions_generales.dart';
-import 'package:lockre/screens/settings/connected_devices_screen.dart';
-import 'package:lockre/screens/settings/politiques_confident.dart';
-import 'package:lockre/screens/settings/password/last_password.dart';
-import 'package:lockre/screens/settings/password/confirm_password.dart';
-import 'package:lockre/screens/auth/splash.dart';
-import 'package:lockre/screens/transactions/all_transaction.dart';
-import 'package:lockre/screens/ecarte/ecarte_menu.dart';
-import 'package:lockre/screens/ecarte/my_ecarte.dart';
-import 'package:lockre/screens/ecarte/ecarte_order.dart';
-import 'package:lockre/screens/auth/login/login.dart';
-import 'package:lockre/screens/auth/signup/complete_profile.dart';
-import 'package:lockre/screens/auth/signup/phone_number.dart';
-import 'package:lockre/screens/auth/signup/photo_cnib.dart';
-import 'package:lockre/screens/auth/signup/test_storage.dart'; 
-import 'package:lockre/screens/send/sender_number_screen.dart';
-import 'package:lockre/screens/send/amount_to_send.dart';
-import 'package:lockre/screens/send/payment_methods.dart';
-import 'package:lockre/screens/auth/onboard.dart'; // Import onboarding screens
-import 'package:lockre/screens/auth/first_page.dart'; // Import onboarding screens
+import 'package:test/screens/home/home.dart';
+import 'package:test/screens/settings/password/change_password.dart';
+import 'package:test/screens/settings/settings.dart';
+import 'package:test/screens/settings/promo_code_screen.dart';
+import 'package:test/screens/settings/limites_de_transaction.dart';
+import 'package:test/screens/settings/conditions_generales.dart';
+import 'package:test/screens/settings/connected_devices_screen.dart';
+import 'package:test/screens/settings/politiques_confident.dart';
+import 'package:test/screens/settings/password/last_password.dart';
+import 'package:test/screens/settings/password/confirm_password.dart';
+import 'package:test/screens/auth/splash.dart';
+import 'package:test/screens/transactions/all_transaction.dart';
+import 'package:test/screens/ecarte/ecarte_menu.dart';
+import 'package:test/screens/ecarte/my_ecarte.dart';
+import 'package:test/screens/ecarte/ecarte_order.dart';
+import 'package:test/screens/auth/login/login.dart';
+import 'package:test/screens/auth/signup/complete_profile.dart';
+import 'package:test/screens/auth/signup/phone_number.dart';
+import 'package:test/screens/auth/signup/photo_cnib.dart';
+import 'package:test/screens/auth/signup/test_storage.dart'; 
+import 'package:test/screens/send/sender_number_screen.dart';
+import 'package:test/screens/send/amount_to_send.dart';
+import 'package:test/screens/send/payment_methods.dart';
+import 'package:test/screens/auth/onboard.dart'; // Import onboarding screens
+import 'package:test/screens/auth/first_page.dart'; // Import onboarding screens
 import 'route.dart';
 
 

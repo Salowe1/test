@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lockre/constants/colors.dart'; // Make sure to import the correct colors
+import 'package:test/constants/colors.dart'; // Make sure to import the correct colors
 
 class OrderDialog extends StatelessWidget {
   const OrderDialog({Key? key}) : super(key: key);

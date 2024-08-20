@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lockre/screens/send/amount_to_send.dart';
+import 'package:test/screens/send/amount_to_send.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:contacts_service/contacts_service.dart' as contacts_service;
 import 'package:flutter_native_contact_picker/flutter_native_contact_picker.dart' as native_picker;
-import 'package:lockre/constants/colors.dart';
-import 'package:lockre/routes/route.dart'; // Import the MyRoutes class
+import 'package:test/constants/colors.dart';
+import 'package:test/routes/route.dart'; // Import the MyRoutes class
 
 class SenderNumberScreen extends StatefulWidget {
   @override

@@ -3,7 +3,7 @@ import 'dart:io'; // Import dart:io library for exit function
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lockre/constants/colors.dart'; // Adjust the import based on your project's structure
+import 'package:test/constants/colors.dart'; // Adjust the import based on your project's structure
 
 class ConnectedDevicesScreen extends StatefulWidget {
   const ConnectedDevicesScreen({Key? key}) : super(key: key);
@@ -35,6 +35,7 @@ class _ConnectedDevicesScreenState extends State<ConnectedDevicesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text('Vos Appareils connectés'),
         backgroundColor: Colors.white,

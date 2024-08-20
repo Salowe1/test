@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lockre/constants/colors.dart';
-import 'package:lockre/screens/settings/settings.dart';
-import 'package:lockre/screens/home/widget/option.dart';
-import 'package:lockre/screens/home/widget/card.dart';
-import 'package:lockre/screens/home/widget/infocard.dart';
-import 'package:lockre/screens/transactions/all_transaction.dart';
+import 'package:test/constants/colors.dart';
+import 'package:test/screens/settings/settings.dart';
+import 'package:test/screens/home/widget/option.dart';
+import 'package:test/screens/home/widget/card.dart';
+import 'package:test/screens/home/widget/infocard.dart';
+import 'package:test/screens/transactions/all_transaction.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flag/flag.dart';

@@ -1,20 +1,20 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:lockre/constants/colors.dart';
+import 'package:test/constants/colors.dart';
 
 
 
-class RateLockreDialog extends StatefulWidget {
+class RatetestDialog extends StatefulWidget {
   final VoidCallback onClose;
 
-  const RateLockreDialog({Key? key, required this.onClose}) : super(key: key);
+  const RatetestDialog({Key? key, required this.onClose}) : super(key: key);
 
   @override
-  _RateLockreDialogState createState() => _RateLockreDialogState();
+  _RatetestDialogState createState() => _RatetestDialogState();
 }
 
-class _RateLockreDialogState extends State<RateLockreDialog> {
+class _RatetestDialogState extends State<RatetestDialog> {
   int _selectedRating = 0;
 
   void _onStarTap(int index) {
@@ -120,7 +120,7 @@ class _RateLockreDialogState extends State<RateLockreDialog> {
                 backgroundColor: Colors.transparent,
                 child: ClipOval(
                   child: Image.asset(
-                    'assets/logo/lockre.png',
+                    'assets/logo/lockre .png',
                     width: 100,
                   ),
                 ),

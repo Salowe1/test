@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lockre/constants/colors.dart';
+import 'package:test/constants/colors.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:mongo_dart/mongo_dart.dart' as mongo;
 import 'package:sms_autofill/sms_autofill.dart';

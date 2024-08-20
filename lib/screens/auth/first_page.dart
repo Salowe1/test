@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lockre/constants/colors.dart';
+import 'package:test/constants/colors.dart';
 
 class FirstPageScreen extends StatelessWidget {
   @override

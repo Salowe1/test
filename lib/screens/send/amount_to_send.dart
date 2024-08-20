@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lockre/constants/colors.dart';
-import 'package:lockre/screens/send/payment_methods.dart';
+import 'package:test/constants/colors.dart';
+import 'package:test/screens/send/payment_methods.dart';
 
 class AmountToSendScreen extends StatefulWidget {
   final String selectedNumber;

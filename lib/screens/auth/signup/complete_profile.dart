@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
-import 'package:lockre/constants/colors.dart' as Constants;
-import 'package:lockre/screens/auth/signup/photo_cnib.dart';
+import 'package:test/constants/colors.dart' as Constants;
+import 'package:test/screens/auth/signup/photo_cnib.dart';
 import 'package:mongo_dart/mongo_dart.dart' as mongo;
 
 const MONGO_URL =

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:whatsapp_unilink/whatsapp_unilink.dart';
-import 'package:lockre/constants/colors.dart'; // Make sure to import your AppColors here
+import 'package:test/constants/colors.dart'; // Make sure to import your AppColors here
 
 class ContactSupportDialog extends StatelessWidget {
   final VoidCallback onClose;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lockre/constants/colors.dart';
-import 'package:lockre/screens/settings/password/confirm_password.dart';
+import 'package:test/constants/colors.dart';
+import 'package:test/screens/settings/password/confirm_password.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:numeric_keyboard/numeric_keyboard.dart';
 
@@ -44,6 +44,7 @@ class _PasswordPageState extends State<ChangePasswordPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: SingleChildScrollView(
           child: Column(

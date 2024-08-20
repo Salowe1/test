@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lockre/constants/colors.dart';
-import 'package:lockre/screens/auth/login/login.dart';
+import 'package:test/constants/colors.dart';
+import 'package:test/screens/auth/login/login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
  // Make sure to import your AuthService

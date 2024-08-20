@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lockre/constants/colors.dart';
+import 'package:test/constants/colors.dart';
 import 'contact_seller_screen.dart'; // Make sure to import your ContactSellerScreen
 
 class InfoCard extends StatelessWidget {

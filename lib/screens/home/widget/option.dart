@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart'; // Corrected import statement
 import 'package:get/get.dart';
 
-import 'package:lockre/screens/ecarte/ecarte_menu.dart';
-import 'package:lockre/screens/send/sender_number_screen.dart';
+import 'package:test/screens/ecarte/ecarte_menu.dart';
+import 'package:test/screens/send/sender_number_screen.dart';
 
 class OptionWidget extends StatelessWidget {
   const OptionWidget({

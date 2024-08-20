@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:lockre/constants/colors.dart';
+import 'package:test/constants/colors.dart';
 
 class PromoCodeScreen extends StatelessWidget {
   const PromoCodeScreen({Key? key}) : super(key: key);
@@ -8,6 +8,7 @@ class PromoCodeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text('Code promo'),
         backgroundColor: Colors.white,

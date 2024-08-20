@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
-import 'package:lockre/constants/colors.dart';
-import 'package:lockre/screens/auth/signup/otp.dart';
-// import 'package:lockre/screens/auth/signup/complete_profile.dart';
+import 'package:test/constants/colors.dart';
+import 'package:test/screens/auth/signup/otp.dart';
+// import 'package:test/screens/auth/signup/complete_profile.dart';
 // import 'package:mongo_dart/mongo_dart.dart' as mongo;
 // const MONGO_URL = "mongodb+srv://salowe:Adouabou102001.@lockre.xrasr0e.mongodb.net/?retryWrites=true&w=majority&appName=Lockre";
 // const USER_COLLECTION = "lockre";
