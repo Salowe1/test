@@ -1,4 +1,4 @@
-platform :ios, '13.0'
+platform :ios, '12.0'
 
 project 'Runner.xcworkspace'
 
@@ -29,7 +29,7 @@ end
 
 target 'RunnerTests' do
   inherit! :search_paths
-  platform :ios, '13.0'
+  platform :ios, '12.0'
 end
 
 
