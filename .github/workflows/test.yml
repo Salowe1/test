@@ -17,7 +17,23 @@ jobs:
 
       - run: flutter pub get
 
+      - run: pod cache clean --all
+        working-directory: ios
+
+      - run: pod clean
+        working-directory: ios
+
+      - run: pod deintegrate
+        working-directory: ios
+
+      - run: sudo gem install cocoapods-deintegrate cocoapods-clean
+
+      - run: sudo gem install ffi
+
       - run: pod repo update
+        working-directory: ios
+
+      - run: pod install
         working-directory: ios
 
       - run: flutter build ios --release --no-codesign
