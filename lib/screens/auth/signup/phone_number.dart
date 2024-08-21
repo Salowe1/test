@@ -7,7 +7,7 @@ import 'package:test/screens/auth/signup/otp.dart';
 // import 'package:mongo_dart/mongo_dart.dart' as mongo;
 // const MONGO_URL = "mongodb+srv://salowe:Adouabou102001.@lockre.xrasr0e.mongodb.net/?retryWrites=true&w=majority&appName=Lockre";
 // const USER_COLLECTION = "lockre";
-import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:firebase_auth/firebase_auth.dart';
 
 class PhoneNumberScreen extends StatefulWidget {
   const PhoneNumberScreen({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class PhoneNumberScreen extends StatefulWidget {
 
 class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
   String phoneNumber = '';
-  final FirebaseAuth _auth = FirebaseAuth.instance;
+  // final FirebaseAuth _auth = FirebaseAuth.instance;
   bool _isButtonPressed = false;
   bool _isLoading = false;
   String _errorMessage = '';
@@ -61,10 +61,10 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
       _errorMessage = '';
     });
 
-    await _auth.verifyPhoneNumber(
+    await FirebaseAuth.instance.verifyPhoneNumber(
       phoneNumber: phoneNumber,
       verificationCompleted: (PhoneAuthCredential credential) async {
-        await _auth.signInWithCredential(credential);
+        await FirebaseAuth.instance.signInWithCredential(credential);
       },
       verificationFailed: (FirebaseAuthException e) {
         print('Phone number verification failed: $e');
@@ -74,10 +74,9 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
       },
       codeSent: (String verificationId, int? resendToken) {
         Get.to(() => OTPScreen(
-        phoneNumber: phoneNumber,
-        verificationId: verificationId,
-      ));
-
+          phoneNumber: phoneNumber,
+          verificationId: verificationId,
+        ));
       },
       codeAutoRetrievalTimeout: (String verificationId) {
         // Handle timeout
