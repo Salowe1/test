@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:test/constants/colors.dart';
 import 'package:test/screens/home/home.dart';
 
@@ -12,33 +12,33 @@ class PasswordPage extends StatefulWidget {
 
 class _PasswordPageState extends State<PasswordPage> {
   final TextEditingController _passwordController = TextEditingController();
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  // final FirebaseAuth _auth = FirebaseAuth.instance;
+  // final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
   void _setPassword() async {
-    User? user = _auth.currentUser;
-    if (user != null) {
-      String password = _passwordController.text;
+    // User? user = _auth.currentUser;
+    // if (user != null) {
+    //   String password = _passwordController.text;
 
       // Update password in Firebase Authentication
-      await _auth.currentUser!.updatePassword(password);
+      // await _auth.currentUser!.updatePassword(password);
 
       // Check if user document exists in Firestore
-      var userDoc = await _firestore.collection('users').doc(user.uid).get();
-      if (userDoc.exists) {
+      // var userDoc = await _firestore.collection('users').doc(user.uid).get();
+      // if (userDoc.exists) {
         // User document exists, update 'passwordSet' field
-        await _firestore.collection('users').doc(user.uid).update({
-          'passwordSet': true,
-        });
+        // await _firestore.collection('users').doc(user.uid).update({
+        //   'passwordSet': true,
+        // });
 
         // Navigate to HomeScreen
         Get.offAll(() => HomeScreen());
-      } else {
+      // } else {
         // Handle case where user document doesn't exist
-        print('User document does not exist in Firestore.');
+        // print('User document does not exist in Firestore.');
         // You may want to handle this scenario, e.g., show an error message
-      }
-    }
+      // }
+    // }
   }
 
   InputDecoration _inputDecoration(String label) {
@@ -96,4 +96,3 @@ class _PasswordPageState extends State<PasswordPage> {
     );
   }
 }
-
