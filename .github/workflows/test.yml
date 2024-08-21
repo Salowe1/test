@@ -20,8 +20,6 @@ jobs:
       - run: pod cache clean --all
         working-directory: ios
 
-      - run: pod clean
-        working-directory: ios
 
       - run: pod deintegrate
         working-directory: ios
