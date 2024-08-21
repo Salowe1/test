@@ -56,7 +56,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        Get.offAll(() => HomeScreen()); // Navigate to the HomeScreen
+        Get.offAll(() => const HomeScreen()); // Navigate to the HomeScreen
         return false; // Prevent back button press
       },
       child: Scaffold(
@@ -175,7 +175,7 @@ class SettingsContent extends StatelessWidget {
               icon: Icons.lock,
               title: 'Changer mon mot de passe',
               onTap: () {
-                Get.to(() => const LastPasswordPage());
+                Get.to(() => LastPasswordPage());
               },
             ),
           ],
