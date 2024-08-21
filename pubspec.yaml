@@ -1,7 +1,21 @@
-name: test
+ name: test
 description: "A new Flutter project."
-publish_to: 'none' # Prevent accidental publication
+# The following line prevents the package from being accidentally published to
+# pub.dev using flutter pub publish. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
 version: 1.0.0+1
 
 environment:
@@ -10,8 +24,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   mongo_dart: ^0.10.3
+  meta: ^1.15.0
+
+
   cupertino_icons: ^1.0.2
   get: ^4.6.1
   intl_phone_number_input: ^0.7.4
@@ -46,8 +62,10 @@ dependencies:
   device_info_plus: ^10.1.2
   googleapis: ^13.2.0
   path_provider: ^2.1.4
+  inapp_flutter_kyc: ^1.1.9
   provider: ^6.1.2
   googleapis_auth: ^1.4.1
+ 
   kyc_workflow: ^1.0.13
   animated_widgets: ^1.1.0
   pretty_animated_buttons: ^0.0.1
@@ -58,27 +76,33 @@ dependencies:
   telephony: ^0.2.0
   sms_autofill: ^2.4.0
 
-  # Android-specific dependencies
-  inapp_flutter_kyc:
-    android:
-      sdk: '>=21'
-
 dependency_overrides:
   http: ^0.13.6
-  video_player: ^2.9.1
-  whatsapp_unilink: ^2.1.0
+  video_player: ^2.9.1 # Ensuring the correct version is used
+  whatsapp_unilink: ^2.1.0 # Ensuring the correct version is used
   meta: ^1.15.0
 
+
+  
+
+ 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
   flutter_lints: ^2.0.0
 
+
+
+# The following section is specific to Flutter packages.
 flutter:
+
   uses-material-design: true
 
+  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/logo/
     - assets/icon/
     - assets/image/
     - assets/
+    
