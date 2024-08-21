@@ -15,23 +15,18 @@ jobs:
           channel: 'stable'
           architecture: x64
 
+      - run: flutter pub upgrade
+
       - run: flutter pub get
 
-      - run: pod cache clean --all
-        working-directory: ios
+      # Remove Podfile.lock and Pods directory
+      - name: Remove Podfile.lock and Pods directory
+        run: |
+          rm -f ios/Podfile.lock
+          rm -rf ios/Pods
 
-      - run: pod deintegrate
-        working-directory: ios
-
-      - run: sudo gem install cocoapods-deintegrate cocoapods-clean
-
-      - run: sudo gem install ffi
-
-      - run: pod repo update
-        working-directory: ios
-
-      - name: Install CocoaPods dependencies
-        run: pod install --repo-update
+      # Install CocoaPods dependencies
+      - run: pod install --repo-update
         working-directory: ios
 
       - name: Build iOS App
