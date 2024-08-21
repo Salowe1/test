@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:test/screens/send/amount_to_send.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
-import 'package:permission_handler/permission_handler.dart';
-import 'package:contacts_service/contacts_service.dart' as contacts_service;
-import 'package:flutter_native_contact_picker/flutter_native_contact_picker.dart' as native_picker;
+// import 'package:permission_handler/permission_handler.dart';
+// import 'package:contacts_service/contacts_service.dart' as contacts_service;
+// import 'package:flutter_native_contact_picker/flutter_native_contact_picker.dart' as native_picker;
 import 'package:test/constants/colors.dart';
 import 'package:test/routes/route.dart'; // Import the MyRoutes class
 
@@ -14,20 +14,20 @@ class SenderNumberScreen extends StatefulWidget {
 }
 
 class _SenderNumberScreenState extends State<SenderNumberScreen> {
-  List<contacts_service.Contact> _contacts = [];
-  List<contacts_service.Contact> _filteredContacts = [];
+  // List<contacts_service.Contact> _contacts = [];
+  // List<contacts_service.Contact> _filteredContacts = [];
   bool _isLoading = true;
   final TextEditingController _controller = TextEditingController();
   String _selectedCountryCode = 'BF';
-  final native_picker.FlutterContactPicker _contactPicker = native_picker.FlutterContactPicker();
+  // final native_picker.FlutterContactPicker _contactPicker = native_picker.FlutterContactPicker();
   bool _isButtonPressed = false;
 
   @override
   void initState() {
     super.initState();
-    _askPermissions();
+    // _askPermissions();
     _controller.addListener(_filterContacts);
-    _getContacts();
+    // _getContacts();
   }
 
   @override
@@ -37,6 +37,7 @@ class _SenderNumberScreenState extends State<SenderNumberScreen> {
     super.dispose();
   }
 
+  /*
   Future<void> _askPermissions() async {
     var status = await Permission.contacts.request();
     if (!status.isGranted) {
@@ -45,7 +46,9 @@ class _SenderNumberScreenState extends State<SenderNumberScreen> {
       });
     }
   }
+  */
 
+  /*
   Future<void> _getContacts() async {
     try {
       var contacts = await contacts_service.ContactsService.getContacts();
@@ -61,9 +64,11 @@ class _SenderNumberScreenState extends State<SenderNumberScreen> {
       });
     }
   }
+  */
 
   void _filterContacts() {
     String query = _controller.text.toLowerCase();
+    /*
     setState(() {
       _filteredContacts = _contacts.where((contact) {
         String contactName = contact.displayName?.toLowerCase() ?? '';
@@ -71,6 +76,7 @@ class _SenderNumberScreenState extends State<SenderNumberScreen> {
         return phoneNumbers.any((phoneNumber) => phoneNumber.contains(query)) || contactName.contains(query);
       }).toList();
     });
+    */
   }
 
   String _normalizePhoneNumber(String phoneNumber) {
@@ -175,6 +181,7 @@ class _SenderNumberScreenState extends State<SenderNumberScreen> {
     if (_isLoading) {
       return const Center(child: CircularProgressIndicator());
     }
+    /*
     if (_filteredContacts.isEmpty) {
       return const Center(child: Text('Aucun contact trouvé'));
     }
@@ -199,6 +206,8 @@ class _SenderNumberScreenState extends State<SenderNumberScreen> {
         },
       ),
     );
+    */
+    return const Center(child: Text('Contact list is commented out.'));
   }
 
   Widget _buildContinueButton() {
