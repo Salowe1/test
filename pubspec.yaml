@@ -59,7 +59,7 @@ dependencies:
   sign_in_with_apple: ^6.1.1
   flutter_native_contact_picker: ^0.0.6
   flutter_signin_button: ^2.0.0
-  device_info_plus: ^10.1.2
+  
   googleapis: ^13.2.0
   path_provider: ^2.1.4
 
