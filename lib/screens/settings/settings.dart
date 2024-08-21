@@ -56,7 +56,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        Get.offAll(() => const HomeScreen()); // Navigate to the HomeScreen
+        Get.offAll(() => HomeScreen()); // Navigate to the HomeScreen
         return false; // Prevent back button press
       },
       child: Scaffold(
