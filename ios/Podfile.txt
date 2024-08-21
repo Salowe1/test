@@ -6,7 +6,7 @@ target 'Runner' do
   use_frameworks!
   use_modular_headers!
 
-  pod 'inapp_flutter_kyc', :path => '.symlinks/plugins/inapp_flutter_kyc/ios'
+  
 
   target 'RunnerTests' do
     inherit! :search_paths
