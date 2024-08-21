@@ -20,7 +20,6 @@ jobs:
       - run: pod cache clean --all
         working-directory: ios
 
-
       - run: pod deintegrate
         working-directory: ios
 
@@ -31,10 +30,19 @@ jobs:
       - run: pod repo update
         working-directory: ios
 
-      - run: pod install
+      - name: Install CocoaPods dependencies
+        run: pod install --repo-update
         working-directory: ios
 
-      - run: flutter build ios --release --no-codesign
+      - name: Build iOS App
+        run: |
+          flutter clean
+          flutter build ios --release --no-codesign
+          xcodebuild -workspace ios/Runner.xcworkspace \
+                     -scheme Runner \
+                     -sdk iphoneos \
+                     -configuration Release \
+                     -allowProvisioningUpdates
 
       - run: mkdir Payload
         working-directory: build/ios/iphoneos
