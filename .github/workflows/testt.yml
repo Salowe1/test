@@ -19,13 +19,18 @@ jobs:
 
       - run: flutter pub get
 
-      # Remove Podfile.lock and Pods directory
+    
       - name: Remove Podfile.lock and Pods directory
         run: |
           rm -f ios/Podfile.lock
           rm -rf ios/Pods
 
-      # Install CocoaPods dependencies
+     
+      - name: Clean Derived Data
+        run: |
+          rm -rf ~/Library/Developer/Xcode/DerivedData/*
+
+      
       - run: pod install --repo-update
         working-directory: ios
 
