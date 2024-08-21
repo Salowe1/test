@@ -1,19 +1,15 @@
-# Define a global platform for your project
 platform :ios, '12.0'
 
-# Specify the path to the Xcode project
 project 'Runner.xcodeproj'
 
 target 'Runner' do
-  # Use dynamic frameworks
   use_frameworks!
   use_modular_headers!
 
-
+  pod 'inapp_flutter_kyc', :path => '.symlinks/plugins/inapp_flutter_kyc/ios'
 
   target 'RunnerTests' do
     inherit! :search_paths
-    # Pods for testing
   end
 end
 
@@ -25,11 +21,9 @@ post_install do |installer|
     end
   end
 
-  # Ensure that all modules are correctly linked
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
       config.build_settings['DEFINES_MODULE'] = 'YES'
     end
   end
 end
-
