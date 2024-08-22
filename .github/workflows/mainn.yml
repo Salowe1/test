@@ -17,10 +17,23 @@ jobs:
 
       - run: flutter pub get
 
+      - run: gem install cocoapods
+       
+
       - run: pod repo update
         working-directory: ios
 
+      - run: pod install --project-directory=ios
+       
+
+      - run: pod cache clean --all
+        
+
+      - run: flutter clean
+        
+
       - run: flutter build ios --release --no-codesign
+        
 
       - run: mkdir Payload
         working-directory: build/ios/iphoneos
