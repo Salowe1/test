@@ -40,6 +40,12 @@ jobs:
       - run: pod install --repo-update
         working-directory: ios
 
+      # Modify SwiftLibphonenumberPlugin.swift
+      - name: Apply Patch to SwiftLibphonenumberPlugin.swift
+        run: |
+          sed -i '' 's/let phoneNumberKit = PhoneNumberKit()/let phoneNumberKit = PhoneNumberKit()/g' $(find ~/.pub-cache/hosted/pub.dev/ -type f -name "SwiftLibphonenumberPlugin.swift")
+
+      # Build iOS App
       - name: Build iOS App
         run: |
           flutter clean
