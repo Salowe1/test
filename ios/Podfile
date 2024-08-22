@@ -6,8 +6,7 @@ target 'Runner' do
   use_frameworks!
   use_modular_headers!
 
-  pod 'flutter_keyboard_visibility', :path => '../.flutter-plugins'
-
+  
 end
 
 target 'RunnerTests' do
