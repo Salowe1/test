@@ -1,24 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-// import 'package:firebase_core/firebase_core.dart'; // Firebase initialization commented out
 import 'package:flutter/services.dart';
-import 'package:test/screens/auth/login/login.dart';
-import 'package:test/screens/auth/onboard.dart';
-import 'package:test/screens/auth/first_page.dart';
-import 'package:test/screens/auth/signup/phone_number.dart';
-import 'package:test/screens/auth/mongodb/mongodb.dart';
+import 'screens/auth/login/login.dart';
+import 'screens/auth/onboard.dart';
+import 'screens/auth/first_page.dart';
+import 'screens/auth/signup/phone_number.dart';
+import 'screens/auth/mongodb/mongodb.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // Initialize Firebase
-  // await Firebase.initializeApp(); // Firebase initialization commented out
-  
-  // Connect to MongoDB
   await _connectToMongoDB();
-
-  // Fetch shared preferences and determine initial route
   final isFirstTime = await _getFirstTimePreference();
   
   runApp(MyApp(isFirstTime: isFirstTime));
@@ -40,7 +33,7 @@ Future<bool> _getFirstTimePreference() async {
     return prefs.getBool('isFirstTime') ?? true;
   } catch (e) {
     print('SharedPreferences error: $e');
-    return true; // Default to true in case of error
+    return true;
   }
 }
 
@@ -78,17 +71,19 @@ class PhoneNumberScreen extends StatelessWidget {
     } on PlatformException catch (e) {
       print('Failed to make phone call: ${e.message}');
     } catch (e) {
-      print('Failed to make phone call: ${e.toString()}');
+      print('Failed to make phone call: $e');
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Phone Number Screen')),
+      appBar: AppBar(title: const Text('Phone Number')),
       body: Center(
         child: ElevatedButton(
-          onPressed: () => _makeUSSDCall('*123#'), // Example USSD code
+          onPressed: () {
+            _makeUSSDCall('*123#');
+          },
           child: const Text('Make USSD Call'),
         ),
       ),
