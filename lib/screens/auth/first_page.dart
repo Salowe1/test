@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:test/constants/colors.dart';
+import '../constants/colors.dart';
 
 class FirstPageScreen extends StatelessWidget {
   @override
@@ -10,9 +10,9 @@ class FirstPageScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             Image.asset('assets/logo/lockre.png', width: 150),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               "Votre partenaire de confiance",
               style: TextStyle(
@@ -21,17 +21,17 @@ class FirstPageScreen extends StatelessWidget {
                 color: AppColors.primaryColor,
               ),
             ),
-            SizedBox(height: 100),
+            const SizedBox(height: 100),
             ElevatedButton(
               onPressed: () {
                 Get.toNamed('/phoneNumber');
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.primaryColor,
-                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                textStyle: TextStyle(fontSize: 18, color: Colors.white),
+                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                textStyle: const TextStyle(fontSize: 18, color: Colors.white),
               ),
-              child: Text(
+              child: const Text(
                 "Commencer",
                 style: TextStyle(fontSize: 18, color: Colors.white),
               ),
@@ -39,7 +39,7 @@ class FirstPageScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   "     Nouveau ici?",
                   style: TextStyle(color: Colors.grey),
                 ),
@@ -52,7 +52,7 @@ class FirstPageScreen extends StatelessWidget {
                     style: TextStyle(color: AppColors.primaryColor),
                   ),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
               ],
             ),
           ],
