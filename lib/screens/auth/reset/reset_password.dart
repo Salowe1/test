@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:firebase_auth/firebase_auth.dart';
 
 class ChangePasswordScreen extends StatefulWidget {
   const ChangePasswordScreen({Key? key}) : super(key: key);
@@ -23,22 +22,12 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
       });
 
       try {
-        // Re-authenticate user
-        // User user = FirebaseAuth.instance.currentUser!;
-        // AuthCredential credential = EmailAuthProvider.credential(
-        //   email: user.email!,
-        //   password: _currentPasswordController.text.trim(),
-        // );
-        // await user.reauthenticateWithCredential(credential);
-
-        // Update password
-        // await user.updatePassword(_newPasswordController.text.trim());
+        // Placeholder for actual password change logic
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Password successfully changed')),
+          const SnackBar(content: Text('Password successfully changed')),
         );
         Navigator.pop(context);
       } catch (e) {
-        print('Error changing password: $e');
         setState(() {
           _errorMessage = 'Failed to change password. Please check your credentials and try again.';
         });
@@ -62,7 +51,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Change Password')),
+      appBar: AppBar(title: const Text('Change Password')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
@@ -98,14 +87,14 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
               if (_errorMessage.isNotEmpty)
                 Text(
                   _errorMessage,
-                  style: TextStyle(color: Colors.red),
+                  style: const TextStyle(color: Colors.red),
                 ),
               const SizedBox(height: 16),
               _isLoading
-                  ? CircularProgressIndicator()
+                  ? const CircularProgressIndicator()
                   : ElevatedButton(
                       onPressed: _changePassword,
-                      child: Text('Change Password'),
+                      child: const Text('Change Password'),
                     ),
             ],
           ),
