@@ -9,12 +9,13 @@ class CustomButton extends StatelessWidget {
   final Color borderColor;
 
   const CustomButton({
+    Key? key,
     required this.text,
     required this.onPressed,
     this.backgroundColor = AppColors.primaryColor,
-    this.textColor = Colors.white, 
-    this.borderColor = const Color(0xFF0071B1), 
-  });
+    this.textColor = Colors.white,
+    this.borderColor = const Color(0xFF0071B1),
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,7 @@ class CustomButton extends StatelessWidget {
             color: Colors.grey.withOpacity(0.5),
             spreadRadius: 2,
             blurRadius: 5,
-            offset: Offset(0, 3), // Position de l'ombre
+            offset: const Offset(0, 3),
           ),
         ],
         color: backgroundColor,
@@ -39,7 +40,7 @@ class CustomButton extends StatelessWidget {
           onTap: onPressed,
           borderRadius: BorderRadius.circular(10.0),
           child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 12.0),
+            padding: const EdgeInsets.symmetric(vertical: 12.0),
             child: Text(
               text,
               style: TextStyle(
