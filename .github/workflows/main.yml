@@ -8,34 +8,50 @@ jobs:
     name: Build iOS Ipa
     runs-on: macos-latest
     steps:
+      # Checkout the repository
       - uses: actions/checkout@v3
 
+      # Set up Flutter for the workflow
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
           architecture: x64
 
+      # Ensure Flutter dependencies are installed
       - run: flutter pub get
 
+      # Clean and regenerate iOS project files, including GeneratedPluginRegistrant.m
+      - name: Clean and regenerate iOS files
+        run: |
+          flutter clean
+          flutter pub get
+          flutter create .
+      
+      # Install CocoaPods dependencies for iOS
       - run: pod repo update
         working-directory: ios
 
+      # Build the iOS release version (without code signing)
       - run: flutter build ios --release --no-codesign
 
+      # Create Payload directory to prepare for IPA export
       - run: mkdir Payload
         working-directory: build/ios/iphoneos
 
+      # Move the Runner.app to the Payload directory
       - run: mv Runner.app/ Payload
         working-directory: build/ios/iphoneos
 
+      # Zip the Payload directory into an IPA file
       - name: Zip output
         run: zip -qq -r -9 FlutterIpaExport.ipa Payload
         working-directory: build/ios/iphoneos
 
+      # Upload the generated IPA to the GitHub release
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
-          repo_token: ${{ secrets.PAT_TOKEN }}  # Use the secret you added
+          repo_token: ${{ secrets.PAT_TOKEN }}  # Use your personal access token secret
           file: build/ios/iphoneos/FlutterIpaExport.ipa
           tag: v1.0
           overwrite: true
