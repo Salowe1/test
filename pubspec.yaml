@@ -26,7 +26,7 @@ dependencies:
     sdk: flutter
   mongo_dart: ^0.10.3
   meta: ^1.15.0
-  flutter_keyboard_visibility: ^6.0.0
+ 
   libphonenumber_plugin: ^0.3.3
 
 
